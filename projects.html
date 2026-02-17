@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Filipe de Abreu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #1f2937;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+    nav {
+      background-color: #374151;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-body h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #111827;
+    }
+    .card-body p {
+      font-size: 0.95em;
+      margin: 10px 0 0;
+    }
+    .card-body a {
+      display: inline-block;
+      margin-top: 12px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .card-body a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #1f2937;
+      color: #fff;
+      padding: 12px;
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Projects</h1>
+    <p>Hands-on AWS & IT Infrastructure Projects</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+  <section>
+    <h2>Highlighted Projects</h2>
+    <div class="projects-grid">
+      <div class="card">
+        <img src="images/s3icon.png" alt="Auto Scaling">
+        <div class="card-body">
+          <h3>Accessing S3 from private instance (no internet traffic)</h3>
+          <p>Designed a solution for accessing S3 whitout accessing internet</p>
+          <a href="https://www.linkedin.com/posts/filipe-queiroz-87baa285_to-practice-ive-build-a-simple-architecture-activity-7180998935258296320-61fp?utm_source=share&utm_medium=member_desktop">View More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/ec2icon.png"" alt="CloudWatch Monitoring">
+        <div class="card-body">
+          <h3>Cluster-like placement groups performance</h3>
+          <p>Comparing latency cros EC2 instancesin Cluster and not in cluster.</p>
+          <a href="https://www.linkedin.com/posts/filipe-queiroz-87baa285_the-concept-of-learning-by-teaching-holds-activity-7185139654680072192-akmT?utm_source=share&utm_medium=member_desktop">View More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/postgresql.png" alt="RDS Failover">
+        <div class="card-body">
+          <h3>Accessing Postgres installed in EC2 redhat</h3>
+          <p>Designed a simple solution that allows a connection to a Postgres database installed on an EC2 instance running Red Hat.</p>
+          <a href="https://www.linkedin.com/posts/filipe-queiroz-87baa285_deploying-a-postgresql-database-on-aws-ec2-activity-7365010121027969024-2Jm0?utm_source=share&utm_medium=member_desktop&rcm=ACoAABIjBF8BDgMjM2uHb4HYfGHp2zWXQG_c-Tw">View More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/lambdaicon.png" alt="S3 Static Site">
+        <div class="card-body">
+          <h3>Static Website Hosting (S3 + Route 53 + Lambda)</h3>
+          <p>Deployed and managed a personal website using AWS S3 for hosting, Route 53 for DNS, and Lambda for backend logic.</p>
+          <a href="https://filipe-deabreu.com" target="_blank">Visit Site</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/DNS_Icon.png" alt="S3 Static Site">
+        <div class="card-body">
+          <h3>Configuring a DNS server</h3>
+          <p>Implemented a simple but functional DNS server for the AWS EC2 to communicate by their name.</p>
+          <a href="https://www.linkedin.com/posts/filipe-queiroz-87baa285_aws-lab-implemented-a-dns-server-to-resolve-activity-7368277852607123457-tmOV?utm_source=share&utm_medium=member_desktop&rcm=ACoAABIjBF8BDgMjM2uHb4HYfGHp2zWXQG_c-Tw" target="_blank">Viwe More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/Cloudwatch_icon.png" alt="S3 Static Site">
+        <div class="card-body">
+          <h3>Reading Cloud watch logs with athena</h3>
+          <p>used athena to read and transform CloudWatch logs into a more usable format.</p>
+          <a href="https://www.linkedin.com/posts/filipe-queiroz-87baa285_automating-aws-lambda-log-analysis-with-athena-activity-7384178121484357632-vQze?utm_source=share&utm_medium=member_desktop&rcm=ACoAABIjBF8BDgMjM2uHb4HYfGHp2zWXQG_c-Tw" target="_blank">Viwe More</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/comprehendIcon.png" alt="Compprehend Icon">
+        <div class="card-body">
+          <h3>Using AWS comprehend for sentiment analyst </h3>
+          <p>Developed a ETL with BOTO3 that creat an CSV, send to S3, and a trigger to call a lambda function to process the file</p>
+          <a href="https://www.linkedin.com/posts/filipe-queiroz-87baa285_automating-aws-lambda-log-analysis-with-athena-activity-7384178121484357632-vQze?utm_source=share&utm_medium=member_desktop&rcm=ACoAABIjBF8BDgMjM2uHb4HYfGHp2zWXQG_c-Tw" target="_blank">Viwe More</a>
+        </div>
+    </div>
+        <div class="card">
+        <img src="images/apiGatewayIcon.png" alt="Api Gateway Icon">
+        <div class="card-body">
+          <h3>Serverless Architecture for Static Websites with Dynamic Content </h3>
+          <p>Designed and implemented a serverless architecture on AWS for an institutional website hosted on Amazon S3 + CloudFront, integrating a dynamic testimonial layer using API Gateway, AWS Lambda, and DynamoDB, with CORS control, security, and low operational cost.</p>
+          <a href="https://www.linkedin.com/feed/update/urn:li:share:7414618811506630656/" target="_blank">Viwe More</a>
+        </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2024 Filipe de Abreu. All rights reserved.</p>
+  </footer>
+</body>
+</html>

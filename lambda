@@ -1,0 +1,49 @@
+import json
+import boto3
+import requests
+from datetime import datetime
+
+dynamodb = boto3.resource('dynamodb')
+table1 = dynamodb.Table('My-Cv-WebSite-Visitor-Count')
+table2 = dynamodb.Table('cv-visitors-ip')
+
+def lambda_handler(event, context):
+
+    # 1️⃣ Increment counter
+    response1 = table1.update_item(
+        Key={'value_counts': 'view-count'},
+        UpdateExpression='ADD Quantity :inc',
+        ExpressionAttributeValues={':inc': 1},
+        ReturnValues="UPDATED_NEW"
+    )
+
+    # 2️⃣ Get IP
+    ip = event["requestContext"]["http"]["sourceIp"]
+
+    # 3️⃣ Get geo data
+    geo = requests.get(f"http://ip-api.com/json/{ip}").json()
+    country = geo.get("country")
+    region = geo.get("regionName")
+
+    # 4️⃣ Save visitor info
+    table2.put_item(
+        Item={
+            'ip': ip,
+            'visit-time': datetime.utcnow().isoformat(),
+            'country': country,
+            'region': region
+        }
+    )
+
+    # 5️⃣ Get updated views
+    views1 = response1['Attributes']['Quantity']
+
+    return {
+        'statusCode': 200,
+        'headers': {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
+        },
+        'body': json.dumps({'views': int(views1)})
+    }

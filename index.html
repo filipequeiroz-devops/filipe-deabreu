@@ -1,0 +1,95 @@
+<!-- ================= index.html ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filipe's Portfolio</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f9f9f9;
+color: #333;
+}
+header {
+background-color: #1f2937;
+color: #fff;
+padding: 30px;
+text-align: center;
+position: relative;
+}
+nav {
+background-color: #374151;
+padding: 12px;
+text-align: center;
+}
+nav a {
+color: #fff;
+text-decoration: none;
+margin: 0 15px;
+font-weight: bold;
+}
+nav a:hover {
+text-decoration: underline;
+}
+section {
+padding: 40px;
+max-width: 900px;
+margin: 0 auto;
+}
+footer {
+background-color: #1f2937;
+color: #fff;
+padding: 12px;
+text-align: center;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+.circle-image {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+overflow: hidden;
+margin: 0 auto;
+}
+.circle-image img {
+width: 100%;
+height: auto;
+}
+</style>
+
+<script>
+const API_URL = "https://a0aeuxgr1i.execute-api.us-east-1.amazonaws.com/default/MyCvAccessCount";
+
+async function visit_count() {
+ await fetch(API_URL, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  }
+)};
+
+visit_count();
+
+</script>
+
+</head>
+<body>
+<header>
+<h1>Filipe de Abreu</h1>
+<p>AWS | Cloud | Systems Engineer</p>
+<div class="circle-image">
+<img src="https://filipe-deabreu.s3.sa-east-1.amazonaws.com/profile.jpeg" alt="Profile Picture">
+</div>
+</header>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="projects.html">Portifolio</a>
+</nav>
+<section>
+<h2>Welcome to my Portfolio</h2>
+<p>Thank you for visiting my personal website! Here, I share my journey in IT and Cloud Computing, migrating to DevOps, including hands-on AWS projects, certifications, and professional experiences. Explore the <strong>Projects</strong> section to see examples of my work in action.</p>
+</html>
