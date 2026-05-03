@@ -4,62 +4,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio of Filipe de Abreu - DevOps, Cloud & Systems Engineer">
 <title>Filipe's Portfolio</title>
-<style>
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-background-color: #f9f9f9;
-color: #333;
-}
-header {
-background-color: #1f2937;
-color: #fff;
-padding: 30px;
-text-align: center;
-position: relative;
-}
-nav {
-background-color: #374151;
-padding: 12px;
-text-align: center;
-}
-nav a {
-color: #fff;
-text-decoration: none;
-margin: 0 15px;
-font-weight: bold;
-}
-nav a:hover {
-text-decoration: underline;
-}
-section {
-padding: 40px;
-max-width: 900px;
-margin: 0 auto;
-}
-footer {
-background-color: #1f2937;
-color: #fff;
-padding: 12px;
-text-align: center;
-position: fixed;
-bottom: 0;
-width: 100%;
-}
-.circle-image {
-width: 120px;
-height: 120px;
-border-radius: 50%;
-overflow: hidden;
-margin: 0 auto;
-}
-.circle-image img {
-width: 100%;
-height: auto;
-}
-</style>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- FontAwesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Custom Styles -->
+<link rel="stylesheet" href="style.css">
 
 <script>
 const API_URL = "https://a0aeuxgr1i.execute-api.us-east-1.amazonaws.com/default/MyCvAccessCount";
@@ -78,67 +32,74 @@ visit_count();
 </head>
 <body>
 <header>
-<h1>Filipe de Abreu</h1>
-<p> DevOps | Cloud | Systems Engineer | AWS</p>
-
-<img src="https://filipe-deabreu.s3.sa-east-1.amazonaws.com/aws-certified-solutions-architect-associate.png" alt="AWS Badge" style="position: absolute; top: 30px; right: 30px; width: 120px; height: 120px; border-radius: 50%;">
 <div class="circle-image">
 <img src="https://filipe-deabreu.s3.sa-east-1.amazonaws.com/profile.jpeg" alt="Profile Picture">
+</div>
+<div class="aws-badge-container">
+<img src="https://filipe-deabreu.s3.sa-east-1.amazonaws.com/aws-certified-solutions-architect-associate.png" alt="AWS Badge">
+</div>
+<div>
+<h1>Filipe de Abreu</h1>
+<p> DevOps | Cloud | Systems Engineer | AWS</p>
 </div>
 </header>
 <nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
-<a href="projects.html">Portifolio</a>
+<a href="projects.html">Portfolio</a>
 </nav>
 <section>
     <h2>Welcome to my Portfolio</h2>
-    <p>Thank you for visiting my personal website! Here, I share my journey in IT and Cloud Computing, migrating to DevOps, including hands-on AWS projects, certifications, and professional experiences. Explore the <strong>Projects</strong> section to see examples of my work in action.</p>
+    <p>Thank you for visiting my personal website! Here, I share my journey in IT and Cloud Computing, migrating to DevOps, including hands-on AWS projects, certifications, and professional experiences. Explore the <strong>Portfolio</strong> section to see examples of my work in action.</p>
 
-    <hr style="border: 0; border-top: 1px solid #ddd; margin: 40px 0;">
-    <P>
-        <h3>Tech Stack</h3>
-            <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white"                       alt="AWS">
-            <img src="https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white"                  alt="Terraform">
-            <img src="https://img.shields.io/badge/Datadog-632CA6?style=for-the-badge&logo=datadog&logoColor=white"                             alt="Datadog">
-            <img src="https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white"                      alt="Ansible">
-            <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"                        alt="Docker">
-            <img src="https://img.shields.io/badge/Linux-%23FCC624.svg?style=for-the-badge&logo=linux&logoColor=black"                          alt="Linux">
-            <img src="https://img.shields.io/badge/Red%20Hat-EE0000?style=for-the-badge&logo=redhat&logoColor=white"                            alt="Red Hat">
-            <img src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white"       alt="GitHub Actions">
-            <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server">
-            <img src="https://img.shields.io/badge/postgresql-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"                alt="PostgreSQL">
-            <img src="https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=amazondynamodb&logoColor=white"            alt="DynamoDB">
-            <img src="https://img.shields.io/badge/python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white"                        alt="Python">
-            <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black"                alt="JavaScript">
-            <img src="https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white"                alt="PowerShell">
-            <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"                          alt="HTML5">
-            <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"                            alt="CSS3">
-    </P>
-    <hr style="border: 0; border-top: 1px solid #ddd; margin: 40px 0;">
+    <hr>
+    
+    <h3>Tech Stack</h3>
+    <div class="tech-stack">
+        <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white"                       alt="AWS">
+        <img src="https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white"                  alt="Terraform">
+        <img src="https://img.shields.io/badge/Datadog-632CA6?style=for-the-badge&logo=datadog&logoColor=white"                             alt="Datadog">
+        <img src="https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white"                      alt="Ansible">
+        <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"                        alt="Docker">
+        <img src="https://img.shields.io/badge/Linux-%23FCC624.svg?style=for-the-badge&logo=linux&logoColor=black"                          alt="Linux">
+        <img src="https://img.shields.io/badge/Red%20Hat-EE0000?style=for-the-badge&logo=redhat&logoColor=white"                            alt="Red Hat">
+        <img src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white"       alt="GitHub Actions">
+        <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server">
+        <img src="https://img.shields.io/badge/postgresql-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"                alt="PostgreSQL">
+        <img src="https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=amazondynamodb&logoColor=white"            alt="DynamoDB">
+        <img src="https://img.shields.io/badge/python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white"                        alt="Python">
+        <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black"                alt="JavaScript">
+        <img src="https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white"                alt="PowerShell">
+        <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"                          alt="HTML5">
+        <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"                            alt="CSS3">
+    </div>
+
+    <hr>
 
     <h3>Get in Touch</h3>
     <p>If you'd like to discuss Cloud, DevOps, or potential opportunities, feel free to reach out:</p>
     
-    <p>
-        <i class="fas fa-envelope" style="color: #374151; width: 20px;"></i> 
-        <strong>WhatApp / Phone Number:</strong> <a href="https://api.whatsapp.com/send/?phone=5511968597371&text&type=phone_number&app_absent=0&utm_source=ig" style="color: #374151; text-decoration: none;">+55 11 96859-7371</a>
-    </p>
-    
-    <p>
-        <i class="fas fa-envelope" style="color: #374151; width: 20px;"></i> 
-        <strong>Email:</strong> <a href="mailto:filipe.queiroz.abreu@gmail.com" style="color: #374151; text-decoration: none;">filipe.queiroz.abreu@gmail.com</a>
-    </p>
-    
-    <p>
-        <i class="fab fa-linkedin" style="color: #374151; width: 20px;"></i> 
-        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/filipe-queiroz-87baa285/" target="_blank" style="color: #374151; text-decoration: none;">linkedin.com/in/filipe-queiroz-87baa285</a>
-    </p>
-    
-    <p>
-        <i class="fab fa-github" style="color: #374151; width: 20px;"></i> 
-        <strong>GitHub:</strong> <a href="https://github.com/filipequeiroz-devops" target="_blank" style="color: #374151; text-decoration: none;">github.com/filipequeiroz-devops</a>
-    </p>
+    <div class="contact-info">
+        <p>
+            <i class="fab fa-whatsapp"></i> 
+            <strong>WhatsApp / Phone:</strong> <a href="https://api.whatsapp.com/send/?phone=5511968597371&text&type=phone_number&app_absent=0&utm_source=ig">+55 11 96859-7371</a>
+        </p>
+        
+        <p>
+            <i class="fas fa-envelope"></i> 
+            <strong>Email:</strong> <a href="mailto:filipe.queiroz.abreu@gmail.com">filipe.queiroz.abreu@gmail.com</a>
+        </p>
+        
+        <p>
+            <i class="fab fa-linkedin"></i> 
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/filipe-queiroz-87baa285/" target="_blank">linkedin.com/in/filipe-queiroz-87baa285</a>
+        </p>
+        
+        <p>
+            <i class="fab fa-github"></i> 
+            <strong>GitHub:</strong> <a href="https://github.com/filipequeiroz-devops" target="_blank">github.com/filipequeiroz-devops</a>
+        </p>
+    </div>
 </section>
 
 <footer>
